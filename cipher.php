@@ -2,7 +2,8 @@
 
 /**
  * A Common Cipher Algorithm widely used to
- * Register users in a clean way in a database.
+ * Register users inside a database in a
+ * Relatively clean way.
  * 
  * A cipher module is first created using a
  * Message to cipher, and optionally a given
@@ -79,7 +80,7 @@ class cipher {
         return 
             (!$this->reconstruct)?
             base64_encode (
-                $this->user_defined_salt
+                $this->user_defined_salt  // Transform salt from binary
             ) : $this->user_defined_salt; // Use provided salting as is.
     }
 
